@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+    //Pular linha
+    function pulaLinha(){
+
+        document.write("<br>" + "<br>");
+    }
+    //
+    function mostra(frase){
+
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    function calculaDobro(numero){
+        
+        return numero * 2;
+    }
+
+    function calculaMetade(numero){
+        return numero / 2;
+    }
+
+    function saudacao(){
+        document.write("Olá, " + nome + "! Tudo bem?")
+    }
+
+    var nome = prompt("Informe o seu nome");
+    var numeroInformado1 = prompt(nome + ", informe um número para saber seu dobro")
+    var numeroInformado2 = prompt(nome + ", informe um número para saber sua metade")
+
+    mostra("O dobro de " + numeroInformado1 + " é " + calculaDobro(numeroInformado1));
+    mostra("A metade de " + numeroInformado2 + " é " + calculaMetade(numeroInformado2));
+    saudacao();
+
+</script>
