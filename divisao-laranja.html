@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+
+    function mostra(frase){
+        document.write(frase)
+        pulaLinha();
+    }
+
+    function divisaoDasLaranjas(laranjas, vizinhos){
+        return laranjas / vizinhos;
+    }
+
+    var quantidadeDeLaranjas = prompt("Quantas laranjas voce têm para dividir?");
+    var quantidadeDevizinhos = prompt("Entre quantos vizinhos será feita a divisão das laranjas?");
+
+    mostra("A quantidade de laranjas que cada vizinho irá receber é: " + divisaoDasLaranjas(quantidadeDeLaranjas, quantidadeDevizinhos).toFixed(2)+".");
+
+</script>
