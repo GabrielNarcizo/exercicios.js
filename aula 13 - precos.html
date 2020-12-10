@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+
+<script>
+    //Pula linha
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+    //Substituir a escrita do document.write
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha()
+    }
+    //Função para cálculo das inflações
+    function calculaInflacao(precoInicial, precoFinal){
+        return (precoFinal - precoInicial) / precoInicial * 100;
+    }
+    //Função para cálculo da média das inflações
+    function calculaMediaInflacao(inflacao1, inflacao2, inflacao3){
+        return (inflacao1 + inflacao2 + inflacao3)/3;
+    }
+    //Função para cálculo das inflações diárias
+    function calculaInflacaoDiaria (inflacao1) {
+
+        return inflacao1 / 6;
+    }
+
+    //Variáveis
+    var precoTomateAntes = 3.30;
+    var precoTomateDepois = 4.70;
+    var precoArrozAntes = 2.99;
+    var precoArrozDepois = 3.25;
+    var precoCenouraAntes = 3.99;
+    var precoCenouraDepois = 4.14;
+
+    //Cálculo das inflações no período de 6 dias
+
+    var inflacaoTomate = calculaInflacao(precoTomateAntes, precoTomateDepois);
+    var inflacaoArroz = calculaInflacao(precoArrozAntes, precoArrozDepois);
+    var inflacaoCenoura = calculaInflacao(precoCenouraAntes, precoCenouraDepois)
+
+    mostra("A inflação do tomate é de " + inflacaoTomate.toFixed(2) + "%");
+    mostra("A inflação do arroz é de " + inflacaoArroz.toFixed(2) + "%");
+    mostra("A inflação da cenoura é de " + inflacaoCenoura.toFixed(2) + "%");
+
+    //Cálculo da média das inflações
+
+    mostra("A média das inflações é de " + calculaMediaInflacao(inflacaoTomate, inflacaoArroz, inflacaoCenoura).toFixed(2) + "%");
+
+    //Cálculo inflações diárias
+
+    mostra("A estimativa diária da inflação do tomate é de " + calculaInflacaoDiaria(inflacaoTomate).toFixed(2) + "%");
+    mostra("A estimativa diária da inflação do arroz é de " + calculaInflacaoDiaria(inflacaoArroz).toFixed(2) + "%");
+    mostra("A estimativa diária da inflação da cenoura é de " + calculaInflacaoDiaria(inflacaoCenoura).toFixed(2) + "%");
+
+
+</script>
